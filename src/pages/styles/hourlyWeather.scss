@@ -1,0 +1,83 @@
+@import "../../../public/mediaConstants.scss";
+.hourlyWeather {
+  background: var(--lighterColor);
+  width: 100%;
+  border-radius: 15px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-height: 86vh;
+  &__back {
+    position: absolute;
+    left: 20px;
+    top: 9px;
+    @media (max-width: $md3) {
+      top: 7px;
+      left: 5px;
+    }
+    @media (max-width: $md4) {
+      top: 13px;
+      left: 13px;
+    }
+    cursor: pointer;
+    img {
+      height: 40px;
+      width: 40px;
+    }
+  }
+  &__forecaste {
+    margin: 30px 0 70px;
+    @media (max-width: $md3) {
+      margin: 10px 0 0;
+    }
+    @media (max-width: $md4) {
+      margin: 15px 0 0;
+    }
+  }
+  @media (max-width: $md3) {
+    min-height: auto;
+    padding: 13px;
+  }
+  &__slider {
+    margin: 0px 20px;
+    padding-bottom: 20px;
+    @media (max-width: $md3) {
+      padding-bottom: 0;
+    }
+  }
+  &__img {
+    position: absolute;
+    left: 20%;
+    top: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+    @media (max-width: $md1) {
+      left: 15%;
+    }
+    @media (max-width: $md2) {
+      left: 35%;
+      top: 80px;
+    }
+    @media (max-width: $md3) {
+      display: none;
+    }
+    img {
+      height: 178px;
+      width: 265px;
+      border-radius: 15px;
+      &:first-child {
+        transform: translateX(140px) translateY(30px);
+        @media (max-width: $md2) {
+          display: none;
+        }
+      }
+      @media (max-width: $md2) {
+        height: 150px;
+        width: 210px;
+      }
+    }
+  }
+}

@@ -1,0 +1,52 @@
+@import "../../../../public/mediaConstants.scss";
+.slide {
+  padding: 22px;
+  border-radius: 15px;
+  background: var(--mediumColor);
+  transform: scale(0.95);
+  @media (max-width: $md3) {
+    padding: 18px;
+  }
+  &__hour {
+    font-size: 20px;
+    position: relative;
+    text-align: center;
+    margin-bottom: 20px;
+    &::before,
+    &::after {
+      content: "";
+      width: 30%;
+      position: absolute;
+      border-bottom: 2px dashed #000;
+      top: 40%;
+    }
+    &::before {
+      content: "";
+      left: 0;
+    }
+    &::after {
+      content: "";
+      right: 0;
+    }
+  }
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &:not(:last-child) {
+      padding-bottom: 10px;
+    }
+    p {
+      font-size: 20px;
+      @media (max-width: $md2) {
+        font-size: 19px;
+      }
+      @media (max-width: $md3) {
+        font-size: 17px;
+      }
+      @media (max-width: $md4) {
+        font-size: 19px;
+      }
+    }
+  }
+}

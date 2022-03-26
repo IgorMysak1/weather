@@ -1,0 +1,79 @@
+@import "../public/mediaConstants.scss";
+@font-face {
+  // font-family: "BalsamiqSans-Bold";
+  // src: local("BalsamiqSans-regular"),
+  //   url("./fonts/BalsamiqSans/BalsamiqSans-Bold.ttf") format("truetype");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  // color: #a1ca89;
+}
+
+._container {
+  min-height: 100vh;
+  max-width: $maxWidthContainer;
+  margin: 0 auto;
+  padding: 20px 25px;
+  @media (max-width: $md1) {
+    max-width: 970px;
+  }
+  @media (max-width: $md2) {
+    max-width: 750px;
+  }
+  @media (max-width: $md3) {
+    max-width: none;
+  }
+  @media (max-width: $md4) {
+    padding: 10px;
+  }
+}
+.wrapper {
+  width: 100%;
+}
+
+input {
+  outline: none;
+  border: none;
+  margin: 0 10px 0 7px;
+  font-size: 20px;
+  width: 100%;
+  border-bottom: 2px dashed #7c7b7b;
+  // font-family: "BalsamiqSans-Bold";
+}
+.invalid {
+  animation: move 1.5s;
+}
+html[data-theme="dark"] {
+  --mediumColor: #322c2c;
+  --lighterColor: #393333;
+  --darkerColor: #272525;
+  --textColor: #c1c1c1;
+  input {
+    background: #393333;
+  }
+  body {
+    background: #322c2c;
+    color: var(--textColor);
+  }
+  a {
+    color: var(--textColor);
+  }
+}
+html[data-theme="light"] {
+  --darkerColor: #cacaca;
+  --mediumColor: #dedede;
+  --lighterColor: #efeaea;
+  --textColor: #000;
+  input {
+    background: #efeaea;
+  }
+  body {
+    background: #dedede;
+    color: var(--textColor);
+  }
+  a {
+    color: var(--textColor);
+  }
+}

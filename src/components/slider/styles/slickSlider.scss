@@ -1,0 +1,49 @@
+@import "../../../../public/mediaConstants.scss";
+.slickSlider {
+  margin-top: 20px;
+  position: relative;
+}
+.slick-dots {
+  transform: translateY(7px);
+}
+.prevArrow,
+.nextArrow {
+  position: absolute;
+  top: 45%;
+  z-index: 10;
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+  @media (max-width: $md3) {
+    height: 30px;
+    width: 30px;
+  }
+}
+.prevArrow {
+  left: -33px;
+  transform: rotate(90deg);
+  @media (max-width: $md3) {
+    left: -25px;
+  }
+}
+.nextArrow {
+  right: -33px;
+  transform: rotate(-90deg);
+  @media (max-width: $md3) {
+    right: -25px;
+  }
+}
+
+.slick__dots {
+  height: 18px;
+  width: 18px;
+  border-radius: 50px;
+  background: var(--mediumColor);
+}
+.active__dot li.slick-active div {
+  transform: scale(1.25);
+  background: var(--darkerColor);
+}
+.active__dot {
+  display: flex;
+}

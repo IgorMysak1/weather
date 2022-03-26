@@ -1,0 +1,45 @@
+@import "../../../public/mediaConstants.scss";
+
+.realTime {
+  min-height: 600px;
+  background: var(--lighterColor);
+  border-radius: 15px;
+  position: relative;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  @media (max-width: $md3) {
+    justify-content: flex-start;
+    min-height: auto;
+  }
+  &__date {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    @media (max-width: $md3) {
+      padding-bottom: 20px;
+    }
+  }
+  &__month {
+    font-size: 30px;
+    @media (max-width: $md3) {
+      font-size: 22px;
+    }
+  }
+  &__hours {
+    font-size: 90px;
+    position: relative;
+    @media (max-width: $md3) {
+      font-size: 54px;
+    }
+  }
+  &__day {
+    font-size: 58px;
+  }
+  &__hour {
+    font-size: 35px;
+  }
+}

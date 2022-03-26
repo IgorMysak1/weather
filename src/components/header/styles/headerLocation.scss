@@ -1,0 +1,48 @@
+@import "../../../../public/mediaConstants.scss";
+.header__location {
+  width: calc(25% - 10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--lighterColor);
+  padding: 3px 10px;
+  border-radius: 15px;
+  order: 3;
+  @media (max-width: $md3) {
+    width: calc(50% - 10px);
+  }
+  @media (max-width: 615px) {
+    width: calc(50% - 10px - 50px);
+  }
+  @media (max-width: $md4) {
+    width: calc(60% - 4px - 45px);
+    padding: 0 8px;
+    padding: 3px 7px;
+  }
+  a {
+    width: calc(100% - 40px);
+    display: flex;
+    align-items: center;
+  }
+  p {
+    display: inline-block;
+    padding-right: 10px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 100%;
+    white-space: nowrap;
+    @media (max-width: $md3) {
+      padding-right: 3px;
+    }
+  }
+  img {
+    height: 40px;
+    width: 40px;
+    transform: translateY(-3px);
+    cursor: pointer;
+    @media (max-width: $md4) {
+      height: 32px;
+      width: 32px;
+    }
+  }
+}

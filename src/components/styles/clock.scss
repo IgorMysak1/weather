@@ -1,0 +1,20 @@
+@import "../../../public/mediaConstants.scss";
+.clock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &.column {
+    flex-direction: column-reverse;
+  }
+  &__hour {
+    &.max {
+      font-size: 60px;
+      margin-top: 10px;
+    }
+  }
+  &__day {
+    &.max {
+      font-size: 40px;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+@import "../../../public/mediaConstants.scss";
+.buttonHourlyWeather {
+  width: 100%;
+  padding: 12px;
+  background: var(--darkerColor);
+  border-radius: 5px 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  color: var(--textColor);
+}

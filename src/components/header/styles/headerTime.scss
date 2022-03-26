@@ -1,0 +1,59 @@
+@import "../../../../public/mediaConstants.scss";
+.header {
+  &__time {
+    width: calc(25% - 10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--lighterColor);
+    padding: 3px 10px;
+    border-radius: 15px;
+    order: 1;
+
+    @media (max-width: $md3) {
+      width: calc(50% - 10px - 50px);
+    }
+    @media (max-width: 615px) {
+      width: calc(50% - 10px);
+      padding: 3px 6px;
+    }
+    @media (max-width: $md4) {
+      width: calc(40% - 5px);
+      padding: 0 7px;
+    }
+    img {
+      padding-right: 10px;
+      height: 40px;
+      width: 40px;
+    }
+  }
+  &__day {
+    display: flex;
+    @media (max-width: $md2) {
+      display: none;
+    }
+    @media (max-width: $md3) {
+      display: block;
+    }
+    @media (max-width: $md4) {
+      display: none;
+    }
+  }
+}
+.header__date {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  span {
+    @media (max-width: $md2) {
+      display: none;
+    }
+    @media (max-width: $md3) {
+      display: block;
+    }
+    @media (max-width: $md4) {
+      display: none;
+    }
+  }
+}

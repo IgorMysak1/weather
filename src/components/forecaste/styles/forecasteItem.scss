@@ -1,0 +1,86 @@
+@import "../../../../public/mediaConstants.scss";
+
+.forecasteItem {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px 0px;
+  @media (max-width: $md3) {
+    padding: 0px 32px;
+  }
+  @media (max-width: 600px) {
+    padding: 0px 25px;
+  }
+  @media (max-width: $md4) {
+    margin: -5px 0;
+    align-items: initial;
+    flex-direction: column-reverse;
+    padding: 0;
+  }
+  &__side {
+    display: flex;
+    align-items: center;
+    p {
+      line-height: 16px;
+    }
+  }
+  &__left {
+    p {
+      margin-right: 5px;
+    }
+  }
+  &__right {
+    flex-direction: row-reverse;
+
+    p {
+      margin-left: 5px;
+      text-align: right;
+    }
+  }
+  &__img {
+    &.min {
+      height: 35px;
+      width: 35px;
+      margin: 0px 5px;
+    }
+    &.avg {
+      height: 40px;
+      width: 40px;
+      margin: 0px 5px;
+    }
+    &.max {
+      height: 55px;
+      width: 55px;
+    }
+    @media (max-width: $md3) {
+      &.min,
+      &.avg,
+      &.max {
+        height: 40px;
+        width: 40px;
+        &:first-child {
+          margin: 0 5px 0 0;
+        }
+        &:last-child {
+          margin: 0 0 0 5px;
+        }
+      }
+    }
+  }
+  &__text {
+    &.min {
+      font-size: 16px;
+      @media (max-width: $md3) {
+        font-size: 18px;
+      }
+    }
+    &.avg {
+      font-size: 18px;
+    }
+    &.max {
+      font-size: 19px;
+      padding: 0px 10px;
+    }
+  }
+}

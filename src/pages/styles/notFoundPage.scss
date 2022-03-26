@@ -1,0 +1,19 @@
+@import "../../../public/mediaConstants.scss";
+.notFoundPage {
+  min-height: 570px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border-radius: 15px;
+  background: var(--lighterColor);
+  font-size: 90px;
+  text-align: center;
+  @media (max-width: $md3) {
+    font-size: 70px;
+  }
+  @media (max-width: $md4) {
+    align-items: flex-start;
+  }
+}

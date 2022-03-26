@@ -1,0 +1,65 @@
+@import "../../../../public/mediaConstants.scss";
+
+.hintIcon {
+  position: relative;
+  @media (max-width: $md3) {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    margin: 11px 0px;
+  }
+
+  img {
+    -webkit-box-shadow: 0px 0px 9px 8px var(--mediumColor);
+    -moz-box-shadow: 0px 0px 9px 8px var(--mediumColor);
+    box-shadow: 0px 0px 9px 8px var(--mediumColor);
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background: var(--mediumColor);
+    cursor: pointer;
+    @media (max-width: $md3) {
+      margin: 0;
+      box-shadow: none;
+    }
+  }
+
+  &__text {
+    background: var(--mediumColor);
+    border-radius: 10px;
+    padding: 6px 10px;
+    position: absolute;
+    top: -49px;
+    white-space: nowrap;
+    font-size: 20px;
+    span {
+      position: absolute;
+      bottom: -13px;
+      left: 8px;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 15px 12.5px 0 12.5px;
+      border-color: var(--mediumColor) transparent transparent transparent;
+      border-radius: 5px;
+      @media (max-width: $md3) {
+        bottom: 13px;
+        left: -17px;
+        transform: rotate(90deg);
+      }
+    }
+    @media (max-width: $md3) {
+      position: relative;
+      margin-left: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      top: auto;
+    }
+    @media (max-width: $md4) {
+      font-size: 18px;
+      margin: 0;
+    }
+  }
+}
