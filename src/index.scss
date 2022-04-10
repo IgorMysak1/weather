@@ -1,8 +1,8 @@
 @import "../public/mediaConstants.scss";
 @font-face {
-  // font-family: "BalsamiqSans-Bold";
-  // src: local("BalsamiqSans-regular"),
-  //   url("./fonts/BalsamiqSans/BalsamiqSans-Bold.ttf") format("truetype");
+  font-family: "Anek-Tamil";
+  src: local("Anek-Tamil"),
+    url("./assets/fonts/VarelaRound-Regular.ttf") format("truetype");
 }
 * {
   margin: 0;
@@ -10,7 +10,9 @@
   box-sizing: border-box;
   // color: #a1ca89;
 }
-
+body {
+  font-family: "Anek-Tamil";
+}
 ._container {
   min-height: 100vh;
   max-width: $maxWidthContainer;
@@ -40,21 +42,21 @@ input {
   font-size: 20px;
   width: 100%;
   border-bottom: 2px dashed #7c7b7b;
-  // font-family: "BalsamiqSans-Bold";
+  font-family: "Anek-Tamil";
 }
 .invalid {
   animation: move 1.5s;
 }
 html[data-theme="dark"] {
-  --mediumColor: #322c2c;
-  --lighterColor: #393333;
-  --darkerColor: #272525;
-  --textColor: #c1c1c1;
+  --mediumColor: #252222;
+  --lighterColor: #352f2f;
+  --darkerColor: #1a1717;
+  --textColor: #c9c5c5;
   input {
-    background: #393333;
+    background: var(--lighterColor);
   }
   body {
-    background: #322c2c;
+    background: var(--mediumColor);
     color: var(--textColor);
   }
   a {
@@ -62,15 +64,15 @@ html[data-theme="dark"] {
   }
 }
 html[data-theme="light"] {
-  --darkerColor: #cacaca;
-  --mediumColor: #dedede;
-  --lighterColor: #efeaea;
-  --textColor: #000;
+  --darkerColor: #707585;
+  --mediumColor: #a6a8af;
+  --lighterColor: #c6c7ce;
+  --textColor: #2b2d35;
   input {
-    background: #efeaea;
+    background: var(--lighterColor);
   }
   body {
-    background: #dedede;
+    background: var(--mediumColor);
     color: var(--textColor);
   }
   a {

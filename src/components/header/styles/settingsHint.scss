@@ -1,13 +1,13 @@
 @import "../../../../public/mediaConstants.scss";
 .settingsHint {
-  max-width: 200px;
+  max-width: 250px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   border-radius: 13px;
   position: absolute;
-  top: -400px;
+  top: -600px;
   left: -300px;
   background: var(--darkerColor);
   padding: 15px;
@@ -18,7 +18,7 @@
   }
   &.active {
     top: 93px;
-    left: -207px;
+    left: -261px;
     transition: all 0.7s ease 0s;
     @media (max-width: $md4) {
       top: 210px;
@@ -37,5 +37,17 @@
     padding-top: 10px;
   }
   &__item {
+  }
+}
+.hints {
+  &__title {
+    font-size: 18px;
+    text-align: center;
+    margin: 0 auto;
+    text-decoration: #e59c2e wavy underline;
+  }
+  &__text {
+    font-size: 15px;
+    text-align: center;
   }
 }

@@ -3,25 +3,27 @@ export const checkDayOrNight = (sunriseUTC, sunsetUTC) => {
   const currentUTC = Math.floor(new Date().getTime() / 1000);
   return sunriseUTC <= currentUTC && sunsetUTC >= currentUTC;
 };
-const formatAMPM = (date) => {
-  let hours = date.getHours();
-  let minutes = date.getMinutes();
-  const ampm = hours >= 12 ? "pm" : "am";
-  hours %= 12;
-  hours = hours || 12;
-  minutes = minutes < 10 ? `0${minutes}` : minutes;
-  return `${hours}:${minutes} ${ampm}`;
-};
 
-export const convertTime = (timeUTC, typeTime, extraParam, title) => {
-  if (extraParam === "Noon") return "00:00 AM";
+export const convertTime = (timeUTC, typeTime, extraParam) => {
+  if (extraParam === "Noon") return typeTime ? "12:00 PM" : "12:00";
   if (timeUTC === 0) return `Today ${extraParam.toLowerCase()} is magic`;
+
   const date = new Date(timeUTC * (extraParam === "current" ? 1 : 1000));
-  if (typeTime) {
-    return formatAMPM(date);
-  } else {
-    return `${date.getHours()}:${String(date.getMinutes()).padStart(2, "0")}`;
-  }
+  const day = date.toLocaleDateString("de-DE", {
+    month: "short",
+    year: "numeric",
+    day: "numeric",
+  });
+  const hour = date.toLocaleTimeString(typeTime ? "en-US" : "UA", {
+    hour: "numeric",
+    minute: "numeric",
+  });
+  return extraParam === "current"
+    ? {
+        hour,
+        day: day.split(".").join(""),
+      }
+    : hour;
 };
 export const moveHintDate = () => {
   const date = new Date();

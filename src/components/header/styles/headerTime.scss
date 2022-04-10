@@ -27,12 +27,22 @@
       width: 40px;
     }
   }
+  &__hour {
+    font-size: 15px;
+    letter-spacing: -0.5px;
+    @media (max-width: $md4) {
+      font-size: 14px;
+    }
+  }
   &__day {
     display: flex;
+    font-size: 15px;
+    letter-spacing: -0.5px;
     @media (max-width: $md2) {
       display: none;
     }
     @media (max-width: $md3) {
+      font-size: 14px;
       display: block;
     }
     @media (max-width: $md4) {

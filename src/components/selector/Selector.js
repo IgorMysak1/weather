@@ -1,7 +1,7 @@
 import React, { useState, useEffect, forwardRef } from "react";
 import { useDispatch } from "react-redux";
 //
-import { SelectorOptions } from "../index";
+import { SelectorOptions, useClickOutSide } from "../index";
 //
 import "./styles/selector.scss";
 
@@ -17,6 +17,7 @@ export const Selector = forwardRef(
     },
     ref
   ) => {
+    const click = useClickOutSide("selector");
     const dispatch = useDispatch();
     const [inputs, setInputs] = useState("");
     const changesInput = (e) => {
@@ -27,6 +28,13 @@ export const Selector = forwardRef(
     useEffect(() => {
       ref && ref.current.focus();
     });
+    useEffect(() => {
+      if (!click) {
+        dispatch(clearListCities());
+        setInputs("");
+        setIsOpenModal && setIsOpenModal(false);
+      }
+    }, [click]);
     return (
       <div className="selector">
         <div className="selector__input">

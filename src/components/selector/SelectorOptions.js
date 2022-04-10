@@ -1,13 +1,8 @@
-import React, { Fragment, useEffect } from "react";
+import React, { Fragment } from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 //
-import {
-  OfferItems,
-  dispatchForecaste,
-  dispatchCapitalCity,
-  useClickOutSide,
-} from "../index";
+import { OfferItems, dispatchForecaste, dispatchCapitalCity } from "../index";
 //
 import "./styles/selector.scss";
 

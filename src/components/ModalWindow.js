@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 //
 import {
@@ -6,7 +6,6 @@ import {
   dispatchListCities,
   dataCurrLocation,
   clearCurrListCities,
-  useClickOutSide,
 } from "./index";
 //
 import "./styles/modalWindow.scss";
@@ -14,7 +13,6 @@ import "./styles/modalWindow.scss";
 let lastSearched = "";
 
 export const ModalWindow = ({ isOpenModal, setIsOpenModal }) => {
-  const click = useClickOutSide("selector");
   const ref = useRef(null);
   const dispatch = useDispatch();
   const { listCities, location } = useSelector((state) => ({
@@ -26,12 +24,7 @@ export const ModalWindow = ({ isOpenModal, setIsOpenModal }) => {
     lastSearched = place;
     dispatch(dispatchListCities(place, "current"));
   };
-  useEffect(() => {
-    if (!click) {
-      dispatch(clearCurrListCities());
-      if (setIsOpenModal) setIsOpenModal(false);
-    }
-  }, [click]);
+
   return (
     <div className={isOpenModal ? "modalWindow active" : "modalWindow"}>
       <Selector

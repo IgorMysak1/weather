@@ -29,19 +29,19 @@ export const eventsPerDay = [
 ];
 export const hints = [
   {
-    title: "Icon near",
-    text: "This button let come back home",
+    title: "Icon to the left of the time",
+    text: "This button let come back home from any page",
   },
   {
-    title: "Loop near input search",
+    title: "Loop in input",
     text: "This button let: -go to current location forecaste -go to last searched location -seacrh forecaste in other place",
   },
   {
-    title: "Icon near current location",
+    title: "Icon to the right of the location",
     text: "This button let change current location",
   },
   {
-    title: "Icons in current time",
+    title: "Icons on the page time in line",
     text: "Hover on button and see time event`s day",
   },
 ];

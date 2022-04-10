@@ -22,9 +22,7 @@ export const Home = () => {
         <p className="home__search">
           Check weather, simple enter city or country
         </p>
-        <p className="home__weather">
-          Check weather, simple enter city or country
-        </p>
+        <p className="home__weather">You can change current location</p>
       </div>
       {/* Landscapes */}
       <div className="home__landscape">

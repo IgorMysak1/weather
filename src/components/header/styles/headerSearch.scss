@@ -2,7 +2,6 @@
 .header__search {
   width: calc(45% - 10px);
   background: var(--lighterColor);
-  padding: 3px 10px;
   border-radius: 15px;
   display: flex;
   justify-content: center;
@@ -13,7 +12,7 @@
   @media (max-width: $md3) {
     order: 5;
     width: 100%;
-    padding: 7px 10px;
+    // padding: 7px 10px;
     margin-top: 10px;
   }
   @media (max-width: $md4) {

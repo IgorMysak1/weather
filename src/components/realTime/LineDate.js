@@ -35,12 +35,9 @@ export const LineDate = () => {
   }, [eventsPerDay, width]);
 
   useEffect(() => {
-    let timerID;
-    setTimeout(() => {
-      timerID = setInterval(() => {
-        setLeftProcentHintDate(moveHintDate());
-      }, 60000);
-    }, 60 - new Date().getMinutes());
+    const timerID = setInterval(() => {
+      setLeftProcentHintDate(moveHintDate());
+    }, 60000);
     return () => clearInterval(timerID);
   }, []);
 

@@ -12,8 +12,9 @@ export const SettingsHint = ({ showHints }) => {
         <div className="settingsHint__item">
           {hints.map((hint) => (
             <Fragment key={hint.text}>
-              <b>{hint.title}</b>
-              <p>{hint.text}</p>
+              <p className="hints__title">{hint.title}</p>
+              <p className="hints__text">{hint.text}</p>
+              <br />
             </Fragment>
           ))}
         </div>

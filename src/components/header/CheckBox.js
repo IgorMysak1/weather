@@ -19,7 +19,6 @@ export const CheckBox = ({ off, on, name, changeAttribute }) => {
     dispatch(
       getSettingsItems({ ...settingsItems, [name]: !settingsItems[name] })
     );
-    console.log(settingsItems["theme"]);
     if (name === "theme") changeAttribute();
   };
   return (
