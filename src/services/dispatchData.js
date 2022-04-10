@@ -69,18 +69,18 @@ export const dispatchCapitalCity = (capitalCity) => {
 export const dispatchIp = () => {
   return async (dispatch) => {
     const response = await fetchIp();
-    const { city, regionName, country, lat, lon, timezone } = response;
+    const { city, region, country, latitude, longitude } = response;
     dispatch(
       dataCurrLocation({
         city,
-        regionName,
-        country,
-        lat,
-        lon,
-        capitalCity: timezone.split("/")[1],
+        region,
+        country: country.name,
+        latitude,
+        longitude,
+        capitalCity: country.capital,
       })
     );
-    dispatch(dispatchForecaste(lat, lon));
-    dispatch(dispatchCapitalCity(timezone.split("/")[1]));
+    dispatch(dispatchForecaste(latitude, longitude));
+    dispatch(dispatchCapitalCity(country.capital));
   };
 };

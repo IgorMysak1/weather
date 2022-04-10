@@ -23,10 +23,24 @@ export const fetchListCities = async (place) => {
 };
 
 export const fetchIp = async () => {
+  const getIp = await axios.get("https://api.db-ip.com/v2/free/self");
+  const encodedParams = new URLSearchParams();
+  encodedParams.append("ip", getIp.data.ipAddress);
+  const options = {
+    method: "POST",
+    url: "https://ip-location5.p.rapidapi.com/get_geo_info",
+    headers: {
+      "content-type": "application/x-www-form-urlencoded",
+      "X-RapidAPI-Host": "ip-location5.p.rapidapi.com",
+      "X-RapidAPI-Key": "e7845a5612mshe0f611758efb8f0p1578e6jsncc223770c5e8",
+    },
+    data: encodedParams,
+  };
   try {
-    const response = await axios.get("http://ip-api.com/json");
+    const response = await axios.request(options);
     return response.data;
   } catch {
+    alert("Turn Off VPN and reload page");
     console.log("Erorr");
   }
 };
