@@ -8,9 +8,6 @@ import thunk from "redux-thunk";
 
 import { BrowserRouter } from "react-router-dom";
 
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-
 import App from "./App";
 import "./index.scss";
 import "./assets/fonts/VarelaRound-Regular.ttf";
