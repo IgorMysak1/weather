@@ -24,7 +24,11 @@ export const CheckBox = ({ off, on, name, changeAttribute }) => {
   return (
     <label className={settingsItems[name] ? "toggle active" : "toggle"}>
       <input onClick={toggle} type="checkbox" />
-      <span className={settingsItems[name] ? "slider active" : "slider"}></span>
+      <span
+        className={
+          settingsItems[name] ? "slider__toggle active" : "slider__toggle"
+        }
+      ></span>
       <div className="labels">
         <span
           name={name}

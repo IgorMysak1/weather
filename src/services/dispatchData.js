@@ -18,7 +18,7 @@ import {
 export const dispatchForecaste = (lat, lon) => {
   return async (dispatch) => {
     const response = await fetchForecast(lat, lon);
-    const currentDayForecaste = response.daily[0];
+    const currentDayForecaste = response?.daily[0];
     dispatch(
       getListDaysForecaste(
         response.daily.slice(0, 6).map((day) => objOfForecaste(day))

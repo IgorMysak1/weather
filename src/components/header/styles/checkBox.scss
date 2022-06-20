@@ -16,7 +16,7 @@
   display: none;
 }
 
-.toggle .slider {
+.toggle .slider__toggle {
   position: absolute;
   top: 0;
   left: 0;
@@ -27,7 +27,7 @@
   transition: all 0.4s ease-in-out;
 }
 
-.toggle .slider::before {
+.toggle .slider__toggle::before {
   content: "";
   position: absolute;
   top: 0;
@@ -41,14 +41,14 @@
   z-index: 2;
   transform: translateX(0px);
 }
-.toggle.active .slider::before {
+.toggle.active .slider__toggle::before {
   transform: translateX(calc(var(--width) - var(--height)));
 }
 
-.toggle input:checked + .slider::before {
+.toggle input:checked + .slider__toggle::before {
   transform: translateX(0);
 }
-.toggle.active input:checked + .slider::before {
+.toggle.active input:checked + .slider__toggle::before {
   transform: translateX(calc(var(--width) - var(--height)));
 }
 
