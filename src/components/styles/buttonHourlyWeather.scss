@@ -2,11 +2,12 @@
 .buttonHourlyWeather {
   width: 100%;
   padding: 12px;
-  background: var(--darkerColor);
+  background: var(--extraColor);
   border-radius: 5px 25px;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   margin-top: 10px;
   font-size: 18px;
   border: none;

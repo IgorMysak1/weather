@@ -52,6 +52,7 @@ html[data-theme="dark"] {
   --lighterColor: #352f2f;
   --darkerColor: #1a1717;
   --textColor: #c9c5c5;
+  --extraColor: #5e5858;
   input {
     background: var(--lighterColor);
   }
@@ -68,6 +69,7 @@ html[data-theme="light"] {
   --mediumColor: #a6a8af;
   --lighterColor: #c6c7ce;
   --textColor: #2b2d35;
+  --extraColor: #8d919d;
   input {
     background: var(--lighterColor);
   }

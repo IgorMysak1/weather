@@ -1,7 +1,9 @@
 @import "../../../../public/mediaConstants.scss";
-.slickSlider {
-  margin-top: 20px;
+.slider {
+  margin-top: 235px;
   position: relative;
+  display: flex;
+  overflow-y: auto;
   @media (max-width: $md4) {
     margin: 0;
   }

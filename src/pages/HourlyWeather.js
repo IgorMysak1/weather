@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 //
 import {
   ForecasteItem,
-  SlickSlider,
+  Slider,
   season,
   useSingleAndDoubleClick,
   getLocalStorage,
@@ -56,7 +56,7 @@ export const HourlyWeather = () => {
         <img src={findSeasonOfYaer()} alt="Landscape" />
       </div>
       <div className="hourlyWeather__slider">
-        <SlickSlider />
+        <Slider />
         <div className="hourlyWeather__pagination" />
       </div>
     </div>
