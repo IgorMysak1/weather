@@ -9,7 +9,7 @@ const initialState = {
   totalForecasteHourly: [],
   eventsPerDay: [],
   capitalCityForecaste: [],
-  listDaysOfForecaste: [{ date: "~", arr: [] }],
+  listDaysOfForecaste: [{ date: "---", arr: [] }],
 };
 
 export const currentDayForecasteReducer = (state = initialState, action) => {
