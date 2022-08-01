@@ -1,5 +1,4 @@
 import React from "react";
-//
 import "./styles/notFoundPage.scss";
 export const NotFoundPage = () => {
   return (

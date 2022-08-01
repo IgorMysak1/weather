@@ -1,7 +1,5 @@
 import React, { useState } from "react";
-//
 import { HeaderTime, HeaderSearch, HeaderLocation, Settings } from "../index";
-//
 import "./styles/header.scss";
 
 export const Header = () => {

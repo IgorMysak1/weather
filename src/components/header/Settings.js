@@ -1,7 +1,5 @@
 import React, { useState } from "react";
-//
 import { SettingsHint, SettingsMain } from "../index";
-//
 import "./styles/settings.scss";
 
 export const Settings = () => {

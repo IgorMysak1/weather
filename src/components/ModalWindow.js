@@ -1,13 +1,11 @@
 import React, { useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
-//
 import {
   Selector,
   dispatchListCities,
   dataCurrLocation,
   clearCurrListCities,
 } from "./index";
-//
 import "./styles/modalWindow.scss";
 
 let lastSearched = "";

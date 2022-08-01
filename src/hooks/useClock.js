@@ -1,8 +1,6 @@
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-//
 import { convertTime } from "../services";
-//
 
 export const useClock = () => {
   const formatOfClock = useSelector(

@@ -1,7 +1,5 @@
 import React, { Fragment } from "react";
-//
 import { hints } from "../index";
-//
 import "./styles/settingsHint.scss";
 
 export const SettingsHint = ({ showHints }) => {

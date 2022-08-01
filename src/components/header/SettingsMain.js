@@ -1,8 +1,5 @@
 import React, { useEffect } from "react";
-
-//
 import { CheckBox, useClickOutSide, checkBoxes, attribute } from "../index";
-//
 import "./styles/settings.scss";
 
 export const SettingsMain = ({ toggleSettings, showContent, setShowHints }) => {

@@ -1,9 +1,7 @@
 import React, { Fragment } from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-//
 import { OfferItems, dispatchForecaste, dispatchCapitalCity } from "../index";
-//
 import "./styles/selector.scss";
 
 export const SelectorOptions = ({

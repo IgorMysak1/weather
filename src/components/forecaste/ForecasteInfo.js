@@ -1,7 +1,5 @@
 import React from "react";
-//
 import { ForecasteItem } from "../index";
-//
 import "./styles/forecasteInfo.scss";
 
 export const ForecasteInfo = ({ size, access, date, listForecasts }) => {

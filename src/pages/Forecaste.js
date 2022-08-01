@@ -1,9 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-//
 import { ForecasteInfo, ButtonHourlyWeather } from "./index";
-//
 import "./styles/forecaste.scss";
 
 export const Forecaste = () => {

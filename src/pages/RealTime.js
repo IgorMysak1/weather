@@ -1,8 +1,6 @@
 import React from "react";
-//
 import { LineDate } from "./index";
 import { useClock } from "../hooks/useClock";
-//
 import "./styles/realTime.scss";
 
 export const RealTime = () => {

@@ -1,8 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
-//
 import { convertTime } from "../index";
-//
 import "./styles/hintIcon.scss";
 
 export const HintIcon = ({

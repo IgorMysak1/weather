@@ -1,6 +1,5 @@
 import React from "react";
 import { useSelector } from "react-redux";
-//
 import "./styles/forecasteItem.scss";
 
 export const ForecasteItem = ({ size, items }) => {

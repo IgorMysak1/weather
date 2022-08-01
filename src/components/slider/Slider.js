@@ -1,8 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
-//
 import { Slide } from "../index";
-//
 import "./styles/slider.scss";
 
 export const Slider = () => {

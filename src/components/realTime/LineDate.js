@@ -40,7 +40,7 @@ export const LineDate = () => {
     }, 60000);
     return () => clearInterval(timerID);
   }, []);
-
+  
   return (
     <div className="lineDate">
       <p className="lineDate__start">00:00</p>

@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-//
 import { checkDayOrNight } from "../index";
 import { useClock } from "../../hooks/useClock";
-//
 import "./styles/headerTime.scss";
 
 export const HeaderTime = () => {

@@ -1,7 +1,6 @@
 import React, { useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-//
 import {
   Selector,
   dataSearLocation,
@@ -9,9 +8,9 @@ import {
   dispatchListCities,
   dispatchForecaste,
 } from "../index";
-//
 import "./styles/headerSearch.scss";
 let lastSearched = "";
+
 export const HeaderSearch = () => {
   const ref = useRef(null);
   const navigate = useNavigate();

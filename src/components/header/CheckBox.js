@@ -1,8 +1,6 @@
 import React, { useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
-//
 import { getLocalStorage, setLocalStorage, getSettingsItems } from "../index";
-//
 import "./styles/checkBox.scss";
 
 export const CheckBox = ({ off, on, name, changeAttribute }) => {

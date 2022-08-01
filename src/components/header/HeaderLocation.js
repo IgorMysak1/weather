@@ -1,15 +1,12 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
-//
 import {
   ModalWindow,
   dispatchForecaste,
   dispatchCapitalCity,
   dataSearLocation,
 } from "../index";
-
-//
 import "./styles/headerLocation.scss";
 
 export const HeaderLocation = ({ isOpenModal, setIsOpenModal }) => {

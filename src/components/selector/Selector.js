@@ -1,8 +1,6 @@
 import React, { useState, useEffect, forwardRef } from "react";
 import { useDispatch } from "react-redux";
-//
 import { SelectorOptions, useClickOutSide } from "../index";
-//
 import "./styles/selector.scss";
 
 export const Selector = forwardRef(
